@@ -1,5 +1,5 @@
-import styled from "styled-components";
+const Button = () => {
+  return "hi";
+};
 
-const FavoriteButton = styled.button``;
-
-export default FavoriteButton;
+export default Button;

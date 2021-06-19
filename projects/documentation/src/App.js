@@ -8,13 +8,16 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Button
+          onKeyDown={(event) => {
+            console.log(event);
+          }}
           onClick={(event) => {
             console.log(event);
           }}
+          tabIndex="0"
         >
           Hello World
         </Button>
-        <Button disabled>disabled</Button>
       </header>
     </div>
   );

@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "strict": true,
+    "jsx": "react"
+  },
+  "exclude": ["**/node_modules", "**/dist"],
+  "include": ["./src"]
+}

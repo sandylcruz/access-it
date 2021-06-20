@@ -30,6 +30,13 @@ const StyledButton = styled.button<ButtonProps>`
 
     box-shadow: ${({ kind }) =>
       kind === "basic" ? "#cfe3e3 0px 0px 0px 5px" : "#afd0d0 0px 0px 0px 5px"};
+
+    &:active {
+      background-color: ${({ kind }) =>
+        kind === "basic" ? "#2C6853" : "#9ed6c3"};
+
+      color: ${({ kind }) => (kind === "basic" ? "white" : "#0e3431")};
+    }
   }
 `;
 

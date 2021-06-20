@@ -4,8 +4,26 @@
   "peerDependencies": {
     "react": "^17.0.2"
   },
+  "author": {
+    "name": "Sandy Cruz",
+    "email": "sandyleahcruz@icloud.com",
+    "url": "https://sandylcruz.github.io"
+  },
+  "description": "AccessIt is a collection of aria accessible components",
+  "keywords": [
+    "accessible",
+    "button",
+    "aria",
+    "a11y"
+  ],
+  "files": [
+    "dist/**/*",
+    "types/**/*"
+  ],
+  "homepage": "https://github.com/sandylcruz/access-it",
   "types": "types",
   "sideEffects": false,
+  "license": "MIT",
   "devDependencies": {
     "@babel/preset-env": "^7.14.5",
     "@babel/preset-react": "^7.14.5",

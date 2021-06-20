@@ -17,6 +17,7 @@ const SecondRowDiv = styled.div`
   flex-direction: row;
   margin-top: 50px;
   justify-content: space-evenly;
+  align-items: center;
 `;
 
 console.log(Button);

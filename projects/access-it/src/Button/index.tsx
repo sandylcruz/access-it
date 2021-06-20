@@ -22,11 +22,16 @@ const StyledButton = styled.button<ButtonProps>`
       : buttonSize === "medium"
       ? "100px"
       : "120px"};
-  height: 50px;
+  // height: 50px;
+  height: ${({ buttonSize }) =>
+    buttonSize === "small"
+      ? "35px"
+      : buttonSize === "medium"
+      ? "40px"
+      : "50px"};
   border: ${({ kind }) =>
     kind === "secondary" ? "transparent" : "1px solid #165549"};
   border-radius: 6px;
-  // color: ${({ kind }) => (kind === "secondary" ? "black" : "purple")};
   cursor: pointer;
   transition: 0.3s;
 

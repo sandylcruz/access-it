@@ -83,11 +83,11 @@ const Button = React.memo<ButtonProps>(
   ({ buttonSize, children, disabled, kind, onClick, onKeyDown }) => (
     <StyledButton
       aria-label={children}
+      buttonSize={buttonSize}
+      disabled={disabled}
+      kind={kind}
       onClick={onClick}
       onKeyDown={onKeyDown}
-      kind={kind}
-      disabled={disabled}
-      buttonSize={buttonSize}
       role="button"
     >
       {children}

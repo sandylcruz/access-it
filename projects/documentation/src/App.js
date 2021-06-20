@@ -32,9 +32,21 @@ function App() {
         onClick={(event) => {
           console.log(event);
         }}
-        kind={"secondary"}
+        kind={"primary"}
       >
         Primary
+      </Button>
+
+      <Button
+        onKeyDown={(event) => {
+          console.log(event);
+        }}
+        onClick={(event) => {
+          console.log(event);
+        }}
+        kind={"secondary"}
+      >
+        Secondary
       </Button>
     </DemoDiv>
   );

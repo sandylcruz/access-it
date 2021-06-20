@@ -1,4 +1,4 @@
-# AcesssIt
+# AccessIt
 
 AccessIt is a collection of accessible components that follow WAI-ARIA accessibility guidelines.
 

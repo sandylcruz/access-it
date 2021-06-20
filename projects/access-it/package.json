@@ -37,6 +37,7 @@
   "main": "dist/bundle",
   "scripts": {
     "build": "webpack --mode=production --config ./webpack.config.js",
+    "publish": "npm publish",
     "start": "webpack --mode=development --watch --config ./webpack.config.js",
     "typecheck": "tsc",
     "types:build": "tsc --declaration --emitDeclarationOnly --declarationDir types"

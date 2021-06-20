@@ -1,4 +1,5 @@
-import "./App.css";
+import { useCallback } from "react";
+
 import { Button } from "access-it";
 import styled from "styled-components";
 
@@ -20,31 +21,24 @@ const SecondRowDiv = styled.div`
   align-items: center;
 `;
 
-console.log(Button);
-
 function App() {
+  const onKeyDown = useCallback((event) => console.log(event), []);
+  const onClick = useCallback((event) => console.log(event), []);
+
   return (
     <DemoDiv className="App">
       <FirstRowDiv>
         <Button
-          onKeyDown={(event) => {
-            console.log(event);
-          }}
-          onClick={(event) => {
-            console.log(event);
-          }}
+          onKeyDown={onKeyDown}
+          onClick={onClick}
           kind={"basic"}
           buttonSize={"medium"}
         >
           Basic
         </Button>
         <Button
-          onKeyDown={(event) => {
-            console.log(event);
-          }}
-          onClick={(event) => {
-            console.log(event);
-          }}
+          onKeyDown={onKeyDown}
+          onClick={onClick}
           kind={"primary"}
           buttonSize={"medium"}
         >
@@ -52,24 +46,16 @@ function App() {
         </Button>
 
         <Button
-          onKeyDown={(event) => {
-            console.log(event);
-          }}
-          onClick={(event) => {
-            console.log(event);
-          }}
+          onKeyDown={onKeyDown}
+          onClick={onClick}
           kind={"secondary"}
           buttonSize={"medium"}
         >
           Secondary
         </Button>
         <Button
-          onKeyDown={(event) => {
-            console.log(event);
-          }}
-          onClick={(event) => {
-            console.log(event);
-          }}
+          onKeyDown={onKeyDown}
+          onClick={onClick}
           kind={"secondary"}
           buttonSize={"medium"}
           disabled
@@ -79,36 +65,24 @@ function App() {
       </FirstRowDiv>
       <SecondRowDiv>
         <Button
-          onKeyDown={(event) => {
-            console.log(event);
-          }}
-          onClick={(event) => {
-            console.log(event);
-          }}
+          onKeyDown={onKeyDown}
+          onClick={onClick}
           kind={"primary"}
           buttonSize={"small"}
         >
           Small
         </Button>
         <Button
-          onKeyDown={(event) => {
-            console.log(event);
-          }}
-          onClick={(event) => {
-            console.log(event);
-          }}
+          onKeyDown={onKeyDown}
+          onClick={onClick}
           kind={"primary"}
           buttonSize={"medium"}
         >
           Medium
         </Button>
         <Button
-          onKeyDown={(event) => {
-            console.log(event);
-          }}
-          onClick={(event) => {
-            console.log(event);
-          }}
+          onKeyDown={onKeyDown}
+          onClick={onClick}
           kind={"primary"}
           buttonSize={"large"}
         >

@@ -4,6 +4,7 @@
   "peerDependencies": {
     "react": "^17.0.2"
   },
+  "types": "types",
   "sideEffects": false,
   "devDependencies": {
     "@babel/preset-env": "^7.14.5",
@@ -19,6 +20,7 @@
   "scripts": {
     "build": "webpack --mode=production --config ./webpack.config.js",
     "start": "webpack --mode=development --watch --config ./webpack.config.js",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "types:build": "tsc --declaration --emitDeclarationOnly --declarationDir types"
   }
 }

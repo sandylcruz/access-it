@@ -9,15 +9,24 @@ const StyledButton = styled.button<ButtonProps>`
       : kind === "primary"
       ? "#29614d"
       : "transparent"};
-  font-size: 20px;
-  color: ${({ kind }) =>
-    kind === "basic" ? "#0e3431" : kind === "primary" ? "white" : "#29614d"};
-
-  width: 120px;
+  color: ${({ kind }) => (kind === "primary" ? "white" : "#0e3431")};
+  font-size: ${({ buttonSize }) =>
+    buttonSize === "small"
+      ? "15px"
+      : buttonSize === "medium"
+      ? "18px"
+      : "23px"};
+  width: ${({ buttonSize }) =>
+    buttonSize === "small"
+      ? "80px"
+      : buttonSize === "medium"
+      ? "100px"
+      : "120px"};
   height: 50px;
   border: ${({ kind }) =>
     kind === "secondary" ? "transparent" : "1px solid #165549"};
   border-radius: 6px;
+  // color: ${({ kind }) => (kind === "secondary" ? "black" : "purple")};
   cursor: pointer;
   transition: 0.3s;
 
@@ -51,21 +60,30 @@ const StyledButton = styled.button<ButtonProps>`
       color: ${({ kind }) => (kind === "primary" ? "#0e3431" : "white")};
     }
   }
+
+  &:disabled {
+    background-color: #ededed;
+    color: #c9cdd1;
+    cursor: not-allowed;
+  }
 `;
 
 interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
   children: string;
   kind: "basic" | "primary" | "secondary";
+  buttonSize: "small" | "medium" | "large";
 }
 
 const Button = React.memo<ButtonProps>(
-  ({ children, kind, onClick, onKeyDown }) => {
+  ({ buttonSize, children, disabled, kind, onClick, onKeyDown }) => {
     return (
       <StyledButton
         aria-label={children}
         onClick={onClick}
         onKeyDown={onKeyDown}
         kind={kind}
+        disabled={disabled}
+        buttonSize={buttonSize}
       >
         {children}
       </StyledButton>

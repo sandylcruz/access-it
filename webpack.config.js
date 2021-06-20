@@ -8,6 +8,7 @@ module.exports = {
   externalsPresets: { node: true },
   externals: {
     react: "react",
+    "styled-components": "styled-components",
   },
   module: {
     rules: [

@@ -1,6 +1,6 @@
 {
   "name": "access-it",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "peerDependencies": {
     "react": "^17.0.2"
   },

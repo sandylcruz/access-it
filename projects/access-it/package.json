@@ -20,6 +20,5 @@
     "build": "webpack --mode=production --config ./webpack.config.js",
     "start": "webpack --mode=development --watch --config ./webpack.config.js",
     "typecheck": "tsc"
-  },
-  "dependencies": {}
+  }
 }

@@ -80,20 +80,19 @@ interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
 }
 
 const Button = React.memo<ButtonProps>(
-  ({ buttonSize, children, disabled, kind, onClick, onKeyDown }) => {
-    return (
-      <StyledButton
-        aria-label={children}
-        onClick={onClick}
-        onKeyDown={onKeyDown}
-        kind={kind}
-        disabled={disabled}
-        buttonSize={buttonSize}
-      >
-        {children}
-      </StyledButton>
-    );
-  }
+  ({ buttonSize, children, disabled, kind, onClick, onKeyDown }) => (
+    <StyledButton
+      aria-label={children}
+      onClick={onClick}
+      onKeyDown={onKeyDown}
+      kind={kind}
+      disabled={disabled}
+      buttonSize={buttonSize}
+      role="button"
+    >
+      {children}
+    </StyledButton>
+  )
 );
 
 export default Button;

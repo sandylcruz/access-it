@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import React, { useCallback } from "react";
 
 import { Button } from "access-it";
 import styled from "styled-components";
@@ -21,7 +21,7 @@ const SecondRowDiv = styled.div`
   align-items: center;
 `;
 
-function App() {
+const App = React.memo(() => {
   const onKeyDown = useCallback((event) => console.log(event), []);
   const onClick = useCallback((event) => console.log(event), []);
 
@@ -91,6 +91,6 @@ function App() {
       </SecondRowDiv>
     </DemoDiv>
   );
-}
+});
 
 export default App;

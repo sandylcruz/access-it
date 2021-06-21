@@ -49,7 +49,6 @@ const NavHeader = styled.div`
   line-height: 16px;
   letter-spacing: 0.142em;
   margin-bottom: 4px;
-  // padding-left: 30px;
   margin-top: 20px;
 `;
 
@@ -57,7 +56,7 @@ const NavigationDiv = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 25px;
-  position: sticky;
+  position: fixed;
   background-color: white;
 `;
 

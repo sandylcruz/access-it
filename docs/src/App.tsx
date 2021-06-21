@@ -1,7 +1,7 @@
 import React from "react";
 
 import styled, { createGlobalStyle } from "styled-components";
-import ButtonSection from "./ButtonSection";
+import Components from "./Components";
 import Navigation from "./Nav";
 import Overview from "./Overview";
 
@@ -45,7 +45,7 @@ const App = React.memo(() => {
       </LeftSide>
       <RightSide>
         <Overview />
-        <ButtonSection />
+        <Components />
       </RightSide>
     </AppContainer>
   );

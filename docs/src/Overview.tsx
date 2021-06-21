@@ -22,7 +22,7 @@ const H1 = styled.h1`
 const H2 = styled.h2`
   position: relative;
   font-weight: bold;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 `;
 
 const HeaderTR = styled.tr`
@@ -133,6 +133,29 @@ const Overview = React.memo(() => {
             <li>
               Run <LICode>yarn start</LICode> to get the source code and Webpack
               server running
+            </li>
+            <li>
+              Run <LICode>yarn start</LICode> in docs to get the documentation
+              server running.
+            </li>
+            <li>
+              Open <LICode>http://localhost:3000</LICode>.
+            </li>
+          </Ol>
+        </P>
+        <P>
+          In order to publish:
+          <Ol>
+            <li>
+              After the repo is in the correct state, bump the package version
+              following <a href="https://semver.org">semantic versioning</a>
+            </li>
+            <li>
+              Commit the package bump in a commit with a comment like "Bump to
+              1.0.1".
+            </li>
+            <li>
+              Run npm publish <LICode>--access public</LICode>.
             </li>
           </Ol>
         </P>

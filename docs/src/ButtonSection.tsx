@@ -11,10 +11,10 @@ const FirstRowDiv = styled.div`
   justify-content: space-evenly;
 `;
 
-const H1 = styled.h1`
+const H2 = styled.h2`
   position: relative;
   font-weight: bold;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 `;
 
 const SecondRowDiv = styled.div`
@@ -31,7 +31,7 @@ const ButtonSection = React.memo(() => {
 
   return (
     <ButtonContainer>
-      <H1>Buttons</H1>
+      <H2>Buttons</H2>
       <FirstRowDiv>
         <Button
           onKeyDown={onKeyDown}

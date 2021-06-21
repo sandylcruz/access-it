@@ -32,6 +32,18 @@ const HeaderTR = styled.tr`
   border-radius: 4px;
 `;
 
+const LICode = styled.code`
+  background-color: rgb(242, 242, 250);
+  color: black;
+  font-family: Consolas, Menlo, monospace;
+  padding: 5px;
+  border-radius: 5px;
+`;
+
+const Ol = styled.ol`
+  margin-left: 45px;
+`;
+
 const OverviewContainer = styled.div``;
 
 const P = styled.p`
@@ -40,6 +52,14 @@ const P = styled.p`
   line-height: 28px;
   margin-bottom: 16px;
   font-weight: 400;
+`;
+
+const SmallCode = styled.div`
+  background-color: rgb(242, 242, 250);
+  color: black;
+  font-family: Consolas, Menlo, monospace;
+  padding: 8px;
+  border-radius: 5px;
 `;
 
 const Table = styled.table`
@@ -85,7 +105,9 @@ const Overview = React.memo(() => {
             </HeaderTR>
           </thead>
           <tr>
-            <TD>kind</TD>
+            <TD>
+              <SmallCode>kind</SmallCode>
+            </TD>
             <TD>Yes</TD>
             <TD>
               Choose the type of button you want. Options are "basic,"
@@ -93,7 +115,9 @@ const Overview = React.memo(() => {
             </TD>
           </tr>
           <tr>
-            <TD>size</TD>
+            <TD>
+              <SmallCode>size</SmallCode>
+            </TD>
             <TD>Yes</TD>
             <TD>
               Choose the size of your button. Options are "small," "medium," or
@@ -101,6 +125,17 @@ const Overview = React.memo(() => {
             </TD>
           </tr>
         </Table>
+
+        <H2>Development</H2>
+        <P>
+          In order to start working:
+          <Ol>
+            <li>
+              Run <LICode>yarn start</LICode> to get the source code and Webpack
+              server running
+            </li>
+          </Ol>
+        </P>
       </Arguments>
     </OverviewContainer>
   );

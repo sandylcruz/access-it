@@ -23,7 +23,7 @@ yarn add access-it react styled-components
 
 In order to start working:
 
-1. Run `yarn start` to get the source code Webpack server running.
+1. Run `yarn start` to get the source code and Webpack server running.
 2. Run `yarn start` in `docs` to get the documentation server running.
 3. Open `http://localhost:3000`.
 

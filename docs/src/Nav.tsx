@@ -73,7 +73,9 @@ const Navigation = React.memo(() => {
   return (
     <NavigationDiv>
       <LogoDiv>
-        <img src={Logo} alt="logo" width={"150px"}></img>
+        <a href="#overview">
+          <img src={Logo} alt="logo" width={"150px"} />
+        </a>
       </LogoDiv>
       <Nav>
         <Ul>
@@ -82,17 +84,17 @@ const Navigation = React.memo(() => {
             <NavHeader>INTRODUCTION</NavHeader>
           </Li>
           <Li>
-            <A aria-current="page" href="/">
+            <A aria-current="page" href="#overview">
               Overview
             </A>
-            <A aria-current="page" href="/">
+            <A aria-current="page" href="#gettingStarted">
               Getting Started
             </A>
           </Li>
           <NavHeader>COMPONENTS</NavHeader>
 
           <Li>
-            <A aria-current="page" href="/">
+            <A aria-current="page" href="#button">
               Button
             </A>
           </Li>

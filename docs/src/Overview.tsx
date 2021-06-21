@@ -88,14 +88,16 @@ const TH = styled.th`
 
 const Overview = React.memo(() => {
   return (
-    <OverviewContainer>
+    <OverviewContainer id="overview">
       <H1>Overview</H1>
       <P>
         AccessIt is a collection of accessible components that follow WAI-ARIA
         accessibility guidelines.
       </P>
 
-      <H1>Getting Started</H1>
+      <div id="gettingStarted">
+        <H1>Getting Started</H1>
+      </div>
       <H2>Installation</H2>
       <Code>npm install access-it react styled-components --save</Code>
       <Code>yarn add access-it react styled-components</Code>

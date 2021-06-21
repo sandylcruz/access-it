@@ -61,7 +61,7 @@ const ButtonSection = React.memo(() => {
   const onClick = useCallback((event) => console.log(event), []);
 
   return (
-    <ButtonContainer>
+    <ButtonContainer id="button">
       <H2>Button</H2>
       <Code>Import {"{ Button }"} from "access-it" </Code>
 

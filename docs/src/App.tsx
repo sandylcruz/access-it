@@ -22,11 +22,9 @@ const GlobalStyle = createGlobalStyle`
 const LeftSide = styled.div`
   position: sticky;
   padding-top: 32px;
-  min-width: 190px;
+  min-width: 210px;
   height: 100vh;
   background-color: white;
-  // box-shadow: 1px 0 5px -2px #aaaaaa;
-  // box-shadow: rgb(47 57 65 / 5%) 0px 16px 24px 0px;
 `;
 
 const RightSide = styled.div`

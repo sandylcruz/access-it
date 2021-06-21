@@ -34,6 +34,7 @@ const StyledButton = styled.button<ButtonProps>`
   border-radius: 6px;
   cursor: pointer;
   transition: 0.3s;
+  margin: 15px;
 
   &:hover {
     background-color: ${({ kind }) =>
@@ -77,22 +78,27 @@ interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
   children: string;
   kind: "basic" | "primary" | "secondary";
   buttonSize: "small" | "medium" | "large";
+  styles?: any;
 }
 
 const Button = React.memo<ButtonProps>(
-  ({ buttonSize, children, disabled, kind, onClick, onKeyDown }) => (
-    <StyledButton
-      aria-label={children}
-      buttonSize={buttonSize}
-      disabled={disabled}
-      kind={kind}
-      onClick={onClick}
-      onKeyDown={onKeyDown}
-      role="button"
-    >
-      {children}
-    </StyledButton>
-  )
+  ({ buttonSize, children, disabled, kind, onClick, onKeyDown, styles }) => {
+    console.log(styles);
+    return (
+      <StyledButton
+        aria-label={children}
+        buttonSize={buttonSize}
+        disabled={disabled}
+        kind={kind}
+        onClick={onClick}
+        onKeyDown={onKeyDown}
+        role="button"
+        styles={styles}
+      >
+        {children}
+      </StyledButton>
+    );
+  }
 );
 
 export default Button;

@@ -1,8 +1,9 @@
-import React, { useCallback } from "react";
+import React from "react";
 
 import styled, { createGlobalStyle } from "styled-components";
-import { Button } from "access-it";
+import ButtonSection from "./ButtonSection";
 import Navigation from "./Nav";
+import Overview from "./Overview";
 
 const AppContainer = styled.div`
   display: flex;
@@ -19,38 +20,23 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const LeftSide = styled.div`
-  position: fixed;
+  position: sticky;
   padding-top: 32px;
   min-width: 190px;
   height: 100vh;
+  background-color: white;
   // box-shadow: 1px 0 5px -2px #aaaaaa;
   // box-shadow: rgb(47 57 65 / 5%) 0px 16px 24px 0px;
 `;
 
 const RightSide = styled.div`
-  margin-top: 100px;
-  margin-left: 250px;
+  margin-top: 125px;
+  margin-left: 60px;
   height: 100vh;
-`;
-
-const FirstRowDiv = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-`;
-
-const SecondRowDiv = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin-top: 50px;
-  justify-content: space-evenly;
-  align-items: center;
+  position: relative;
 `;
 
 const App = React.memo(() => {
-  const onKeyDown = useCallback((event) => console.log(event), []);
-  const onClick = useCallback((event) => console.log(event), []);
-
   return (
     <AppContainer>
       <GlobalStyle />
@@ -58,68 +44,8 @@ const App = React.memo(() => {
         <Navigation />
       </LeftSide>
       <RightSide>
-        <FirstRowDiv>
-          <Button
-            onKeyDown={onKeyDown}
-            onClick={onClick}
-            kind={"basic"}
-            buttonSize={"medium"}
-          >
-            Basic
-          </Button>
-          <Button
-            onKeyDown={onKeyDown}
-            onClick={onClick}
-            kind={"primary"}
-            buttonSize={"medium"}
-          >
-            Primary
-          </Button>
-
-          <Button
-            onKeyDown={onKeyDown}
-            onClick={onClick}
-            kind={"secondary"}
-            buttonSize={"medium"}
-          >
-            Secondary
-          </Button>
-          <Button
-            onKeyDown={onKeyDown}
-            onClick={onClick}
-            kind={"secondary"}
-            buttonSize={"medium"}
-            disabled
-          >
-            Disabled
-          </Button>
-        </FirstRowDiv>
-        <SecondRowDiv>
-          <Button
-            onKeyDown={onKeyDown}
-            onClick={onClick}
-            kind={"primary"}
-            buttonSize={"small"}
-          >
-            Small
-          </Button>
-          <Button
-            onKeyDown={onKeyDown}
-            onClick={onClick}
-            kind={"primary"}
-            buttonSize={"medium"}
-          >
-            Medium
-          </Button>
-          <Button
-            onKeyDown={onKeyDown}
-            onClick={onClick}
-            kind={"primary"}
-            buttonSize={"large"}
-          >
-            Large
-          </Button>
-        </SecondRowDiv>
+        <Overview />
+        <ButtonSection />
       </RightSide>
     </AppContainer>
   );

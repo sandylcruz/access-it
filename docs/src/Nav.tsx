@@ -4,7 +4,6 @@ import styled from "styled-components";
 import Logo from "./logo.svg";
 
 const A = styled.a`
-  background: rgb(242, 242, 250);
   display: block;
   font-size: 16px;
   padding: 4px 10px;
@@ -12,9 +11,12 @@ const A = styled.a`
   font-weight: normal;
   margin-bottom: 4px;
   text-decoration: none;
+  color: rgb(108, 108, 128);
 
   &:active {
     color: rgb(130, 87, 230);
+    background-color: rgb(242, 242, 250);
+    border-radius: 4px 10px;
   }
 `;
 
@@ -23,11 +25,6 @@ const Li = styled.li`
   font-size: 20px;
   width: 100%;
   transition: all 200ms ease-in-out 0s;
-  // padding: 0px 20px;
-  &:active {
-    border-radius: 4px 10px;
-    // background-color: rgb(130, 87, 230);
-  }
 `;
 
 const LogoDiv = styled.div`
@@ -40,6 +37,7 @@ const Nav = styled.nav`
   padding-top: 24px;
   align-self: flex-start;
   width: 100%;
+  background-color: white;
 `;
 
 const NavHeader = styled.div`
@@ -59,6 +57,8 @@ const NavigationDiv = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 25px;
+  position: sticky;
+  background-color: white;
 `;
 
 const Ul = styled.ul`
@@ -70,7 +70,7 @@ const Ul = styled.ul`
   align-items: center;
 `;
 
-const Navigation = () => {
+const Navigation = React.memo(() => {
   return (
     <NavigationDiv>
       <LogoDiv>
@@ -86,13 +86,12 @@ const Navigation = () => {
             <A aria-current="page" href="/">
               Overview
             </A>
-          </Li>
-          <NavHeader>GETTING STARTED</NavHeader>
-          <Li>
             <A aria-current="page" href="/">
-              Components
+              Getting Started
             </A>
           </Li>
+          <NavHeader>COMPONENTS</NavHeader>
+
           <Li>
             <A aria-current="page" href="/">
               Button
@@ -102,6 +101,6 @@ const Navigation = () => {
       </Nav>
     </NavigationDiv>
   );
-};
+});
 
 export default Navigation;

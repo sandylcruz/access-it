@@ -2,6 +2,7 @@ import React from "react";
 
 import styled, { createGlobalStyle } from "styled-components";
 import Components from "./Components";
+
 import Navigation from "./Nav";
 import Overview from "./Overview";
 
@@ -22,15 +23,22 @@ const GlobalStyle = createGlobalStyle`
 const LeftSide = styled.div`
   position: sticky;
   padding-top: 32px;
-  min-width: 210px;
+  min-width: 150px;
   height: 100vh;
   background-color: white;
+  z-index: 1001;
+  // display: none;
+  // @media screen and (min-width: 50px) {
+  //   display: flex;
+  //   width: 100%;
+  // }
 `;
 
 const RightSide = styled.div`
-  margin-top: 125px;
+  padding-top: 27px;
   margin-left: 60px;
   position: relative;
+  overflow: auto;
 `;
 
 const App = React.memo(() => {
@@ -40,6 +48,7 @@ const App = React.memo(() => {
       <LeftSide>
         <Navigation />
       </LeftSide>
+
       <RightSide>
         <Overview />
         <Components />

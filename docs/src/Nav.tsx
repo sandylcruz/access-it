@@ -1,6 +1,7 @@
 import React from "react";
 
 import styled from "styled-components";
+import github from "./github.svg";
 import Logo from "./logo.svg";
 
 const A = styled.a`
@@ -20,6 +21,10 @@ const A = styled.a`
   }
 `;
 
+const GithubDiv = styled.div`
+  padding: 4px 10px;
+`;
+
 const Li = styled.li`
   font-family: helvetica;
   font-size: 20px;
@@ -28,9 +33,9 @@ const Li = styled.li`
 `;
 
 const LogoDiv = styled.div`
-  margin-left: 15px;
+  margin-left: 10px;
   margin-right: 15px;
-  margin-top: 25px;
+  // margin-top: 25px;
 `;
 
 const Nav = styled.nav`
@@ -53,8 +58,6 @@ const NavHeader = styled.div`
 `;
 
 const NavigationDiv = styled.div`
-  display: flex;
-  flex-direction: column;
   margin-left: 25px;
   position: fixed;
   background-color: white;
@@ -99,6 +102,16 @@ const Navigation = React.memo(() => {
             </A>
           </Li>
         </Ul>
+
+        <GithubDiv>
+          <a
+            href="https://github.com/sandylcruz/access-it"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={github} alt="githubTag" width={"40px"} />
+          </a>
+        </GithubDiv>
       </Nav>
     </NavigationDiv>
   );

@@ -7,6 +7,7 @@ const H1 = styled.h1`
   position: relative;
   font-weight: bold;
   margin-bottom: 24px;
+  margin-top: ;
 `;
 
 const Components = React.memo(() => {

@@ -11,6 +11,7 @@ const Code = styled.div`
   margin-bottom: 10px;
   padding: 25px;
   border-radius: 5px;
+  max-width: 580px;
 `;
 
 const H1 = styled.h1`
@@ -30,6 +31,7 @@ const HeaderTR = styled.tr`
   color: black;
   text-align: left;
   border-radius: 4px;
+  max-width: 200px;
 `;
 
 const LICode = styled.code`
@@ -41,6 +43,11 @@ const LICode = styled.code`
 `;
 
 const Ol = styled.ol`
+  display: block;
+  color: rgb(108, 108, 128);
+  line-height: 28px;
+  margin-bottom: 16px;
+  font-weight: 400;
   margin-left: 45px;
 `;
 
@@ -68,7 +75,6 @@ const Table = styled.table`
   border-collapse: separate;
   border-spacing: 0px 4px;
   margin-bottom: 16px;
-  width: 100%;
   border-radius: 4px;
 `;
 
@@ -104,61 +110,64 @@ const Overview = React.memo(() => {
               <TH>Description</TH>
             </HeaderTR>
           </thead>
-          <tr>
-            <TD>
-              <SmallCode>kind</SmallCode>
-            </TD>
-            <TD>Yes</TD>
-            <TD>
-              Choose the type of button you want. Options are "basic,"
-              "primary," or "secondary."
-            </TD>
-          </tr>
-          <tr>
-            <TD>
-              <SmallCode>size</SmallCode>
-            </TD>
-            <TD>Yes</TD>
-            <TD>
-              Choose the size of your button. Options are "small," "medium," or
-              "large."
-            </TD>
-          </tr>
+          <tbody>
+            <tr>
+              <TD>
+                <SmallCode>kind</SmallCode>
+              </TD>
+              <TD>Yes</TD>
+              <TD>
+                Choose the type of button you want. Options are "basic,"
+                "primary," or "secondary."
+              </TD>
+            </tr>
+            <tr>
+              <TD>
+                <SmallCode>size</SmallCode>
+              </TD>
+              <TD>Yes</TD>
+              <TD>
+                Choose the size of your button. Options are "small," "medium,"
+                or "large."
+              </TD>
+            </tr>
+          </tbody>
         </Table>
 
         <H2>Development</H2>
         <P>
-          In order to start working:
-          <Ol>
-            <li>
-              Run <LICode>yarn start</LICode> to get the source code and Webpack
-              server running
-            </li>
-            <li>
-              Run <LICode>yarn start</LICode> in docs to get the documentation
-              server running.
-            </li>
-            <li>
-              Open <LICode>http://localhost:3000</LICode>.
-            </li>
-          </Ol>
+          <b>In order to start working:</b>
         </P>
+        <Ol>
+          <li>
+            Run <LICode>yarn start</LICode> to get the source code and Webpack
+            server running
+          </li>
+          <li>
+            Run <LICode>yarn start</LICode> in docs to get the documentation
+            server running.
+          </li>
+          <li>
+            Open <LICode>http://localhost:3000</LICode>.
+          </li>
+        </Ol>
+
         <P>
-          In order to publish:
-          <Ol>
-            <li>
-              After the repo is in the correct state, bump the package version
-              following <a href="https://semver.org">semantic versioning</a>
-            </li>
-            <li>
-              Commit the package bump in a commit with a comment like "Bump to
-              1.0.1".
-            </li>
-            <li>
-              Run npm publish <LICode>--access public</LICode>.
-            </li>
-          </Ol>
+          <b>In order to publish:</b>
         </P>
+        <Ol>
+          <li>
+            After the repo is in the correct state, bump the package version
+            following <a href="https://semver.org">semantic versioning</a>
+          </li>
+          <li>
+            Commit the package bump in a commit with a comment like "Bump to
+            1.0.1".
+          </li>
+          <li>
+            Run npm publish <LICode>--access public</LICode>.
+          </li>
+        </Ol>
       </Arguments>
     </OverviewContainer>
   );

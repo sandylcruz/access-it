@@ -32,7 +32,6 @@ const LeftSide = styled.div`
 const RightSide = styled.div`
   margin-top: 125px;
   margin-left: 60px;
-  height: 100vh;
   position: relative;
 `;
 

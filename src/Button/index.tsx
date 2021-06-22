@@ -83,7 +83,6 @@ interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
 
 const Button = React.memo<ButtonProps>(
   ({ buttonSize, children, disabled, kind, onClick, onKeyDown, styles }) => {
-    console.log(styles);
     return (
       <StyledButton
         aria-label={children}

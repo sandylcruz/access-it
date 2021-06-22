@@ -10,7 +10,7 @@
     "email": "sandyleahcruz@icloud.com",
     "url": "https://sandylcruz.github.io"
   },
-  "description": "AccessIt is a collection of aria accessible components",
+  "description": "Access-It is a collection of aria accessible components",
   "keywords": [
     "accessible",
     "button",
@@ -33,6 +33,7 @@
     "@types/react": "^17.0.11",
     "@types/styled-components": "^5.1.10",
     "babel-loader": "^8.2.2",
+    "concurrently": "^6.2.0",
     "typescript": "^4.3.2",
     "webpack": "^5.39.0",
     "webpack-cli": "^4.7.2"
@@ -40,9 +41,10 @@
   "main": "dist/bundle",
   "scripts": {
     "build": "webpack --mode=production --config ./webpack.config.js",
-    "start": "webpack --mode=development --watch --config ./webpack.config.js",
+    "start": "concurrently \"yarn types:build:watch\" \"webpack --mode=development --watch --config ./webpack.config.js\"",
     "typecheck": "tsc",
     "types:build": "tsc --declaration --emitDeclarationOnly --declarationDir types",
+    "types:build:watch": "yarn types:build --watch",
     "eslint": ""
   }
 }

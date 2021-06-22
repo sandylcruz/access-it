@@ -2,6 +2,7 @@ import React from "react";
 
 import styled from "styled-components";
 import Button from "./ButtonSection";
+import CheckboxSection from "./Checkbox";
 
 const H1 = styled.h1`
   position: relative;
@@ -16,6 +17,7 @@ const Components = React.memo(() => {
       {" "}
       <H1>Components</H1>
       <Button />
+      <CheckboxSection />
     </div>
   );
 });

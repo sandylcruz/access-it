@@ -19,6 +19,11 @@ const A = styled.a`
     background-color: rgb(242, 242, 250);
     border-radius: 4px 10px;
   }
+  &:active {
+    color: red;
+    background-color: rgb(242, 242, 250);
+    border-radius: 4px 10px;
+  }
 `;
 
 const GithubDiv = styled.div`

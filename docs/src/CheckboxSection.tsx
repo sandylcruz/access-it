@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 
-import { Checkbox } from "access-it";
+import { Checkbox, Label } from "access-it";
 import styled from "styled-components";
 
 const BoxContainer = styled.div`
@@ -45,7 +45,7 @@ const CheckboxSection = React.memo(() => {
 
       <Code>Import {"{ Checkbox }"} from "access-it" </Code>
       <BoxContainer>
-        <label id="c1">Testing 1</label>
+        <Label id="c1">Testing 1</Label>
         <Checkbox
           onClick={onClick}
           kind={"default"}
@@ -53,7 +53,7 @@ const CheckboxSection = React.memo(() => {
           id="c1"
         />
 
-        <label id="c2">Testing 2</label>
+        <Label id="c2">Testing 2</Label>
         <Checkbox
           onClick={onClick}
           kind={"default"}

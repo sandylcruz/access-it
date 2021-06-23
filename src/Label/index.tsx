@@ -4,9 +4,15 @@ import styled from "styled-components";
 
 const StyledLabel = styled.label`
   font-weight: bold;
+  user-select: none;
+  cursor: pointer;
 `;
 
-const Label = React.memo(({ children }) => {
+interface LabelProps extends React.HTMLProps<HTMLButtonElement> {
+  children: string;
+}
+
+const Label = React.memo<LabelProps>(({ children }) => {
   return <StyledLabel>{children}</StyledLabel>;
 });
 

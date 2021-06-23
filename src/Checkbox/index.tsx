@@ -2,15 +2,10 @@ import * as React from "react";
 import { useState } from "react";
 import styled from "styled-components";
 
+import Label from "../Label/index";
+
 const CheckboxAndLabel = styled.div`
   margin: 10px;
-`;
-
-const Label = styled.label`
-  margin-left: 10px;
-  font-weight: bold;
-  user-select: none;
-  cursor: pointer;
 `;
 
 const StyledCheckbox = styled.input`
@@ -21,12 +16,12 @@ const StyledCheckbox = styled.input`
   user-select: none;
   &:hover {
     border: 1px solid red;
-    box-shadow: 0px 0px 10px 2px blue;
+    box-shadow: 0px 0px 10px 2px #8a51ff;
   }
 
   &:focus {
     border: 1px solid red;
-    box-shadow: 0px 0px 10px 2px purple;
+    box-shadow: 0px 0px 10px 2px blue;
   }
 
   &:active {
@@ -42,7 +37,7 @@ interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
 }
 
 const Checkbox = React.memo<CheckboxProps>(
-  ({ ariaChecked, id, kind, onClick, styles }) => {
+  ({ ariaChecked, children, id, kind, onClick, styles }) => {
     return (
       <CheckboxAndLabel>
         <StyledCheckbox
@@ -54,9 +49,6 @@ const Checkbox = React.memo<CheckboxProps>(
           type="checkbox"
           styles={styles}
         />
-        {/* <Label htmlFor="vehicle1" for="c1">
-          This is a checkbox with a label
-        </Label> */}
       </CheckboxAndLabel>
     );
   }

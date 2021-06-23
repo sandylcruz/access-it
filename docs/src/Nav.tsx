@@ -87,35 +87,23 @@ const Navigation = React.memo(() => {
             <NavHeader>INTRODUCTION</NavHeader>
           </Li>
           <Li>
-            <A
-              aria-current="page"
-              href="https://sandylcruz.github.io/access-it/#overview"
-            >
+            <A aria-current="page" href="/#overview">
               Overview
             </A>
-            <A
-              aria-current="page"
-              href="https://sandylcruz.github.io/access-it/#gettingStarted"
-            >
+            <A aria-current="page" href="/#gettingStarted">
               Getting Started
             </A>
           </Li>
           <NavHeader>COMPONENTS</NavHeader>
 
           <Li>
-            <A
-              aria-current="page"
-              href="https://sandylcruz.github.io/access-it/#button"
-            >
+            <A aria-current="page" href="/#button">
               Button
             </A>
           </Li>
 
           <Li>
-            <A
-              aria-current="page"
-              href="https://sandylcruz.github.io/access-it/#checkbox"
-            >
+            <A aria-current="page" href="/#checkbox">
               Checkbox
             </A>
           </Li>

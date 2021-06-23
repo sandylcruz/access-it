@@ -1,6 +1,6 @@
 # Access-It
 
-Access-It is a collection of accessible components that follow WAI-ARIA accessibility guidelines.
+Access-It is a collection of accessible components that follow WAI-ARIA accessibility guidelines. [Documentation here](https://sandylcruz.github.io/access-it/)
 
 ## Install
 

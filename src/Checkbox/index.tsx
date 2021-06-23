@@ -10,7 +10,9 @@ const Checkbox = React.memo<CheckboxProps>(({ children }) => {
 
   return (
     <div>
-      <span
+      <label htmlFor="vehicle1">label</label>
+      <input type="checkbox"></input>
+      {/* <span
         role="checkbox"
         aria-checked={ariaChecked}
         tabIndex={0}
@@ -18,7 +20,7 @@ const Checkbox = React.memo<CheckboxProps>(({ children }) => {
       ></span>{" "}
       <label id="chk1-label" className="whatever">
         Remember my preferences
-      </label>
+      </label> */}
     </div>
   );
 });

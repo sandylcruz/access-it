@@ -106,7 +106,7 @@ const ButtonSection = React.memo(() => {
         <BottomOfBox>
           {" "}
           <a href="https://github.com/sandylcruz/access-it/blob/master/src/Button/index.tsx">
-            <img src={CodeIcon} alt="code icon" />
+            <img src={CodeIcon} alt="Expand code icon" />
           </a>
         </BottomOfBox>
       </ButtonBoxContainer>
@@ -143,7 +143,7 @@ const ButtonSection = React.memo(() => {
           <BottomOfBox>
             {" "}
             <a href="https://github.com/sandylcruz/access-it/blob/master/src/Button/index.tsx">
-              <img src={CodeIcon} alt="code icon" />
+              <img src={CodeIcon} alt="Expand code icon" />
             </a>
           </BottomOfBox>
         </ButtonBoxContainer>

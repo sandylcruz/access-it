@@ -71,6 +71,7 @@ const StyledButton = styled.button<ButtonProps>`
     background-color: #ededed;
     color: #c9cdd1;
     cursor: not-allowed;
+    opacity: 0.5;
   }
 `;
 
@@ -86,8 +87,8 @@ const Button = React.memo<ButtonProps>(
     return (
       <StyledButton
         aria-label={children}
-        buttonSize={buttonSize}
         disabled={disabled}
+        buttonSize={buttonSize}
         kind={kind}
         onClick={onClick}
         onKeyDown={onKeyDown}

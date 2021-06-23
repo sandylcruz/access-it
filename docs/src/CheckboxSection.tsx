@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const BoxContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
   border-radius: 5px;
   height: 100%;
@@ -45,8 +45,21 @@ const CheckboxSection = React.memo(() => {
 
       <Code>Import {"{ Checkbox }"} from "access-it" </Code>
       <BoxContainer>
-        <Checkbox onClick={onClick} kind={"default"} ariaChecked={true} />
-        <Checkbox onClick={onClick} kind={"default"} ariaChecked={true} />
+        <label id="c1">Testing 1</label>
+        <Checkbox
+          onClick={onClick}
+          kind={"default"}
+          ariaChecked={true}
+          id="c1"
+        />
+
+        <label id="c2">Testing 2</label>
+        <Checkbox
+          onClick={onClick}
+          kind={"default"}
+          ariaChecked={false}
+          id="c2"
+        />
       </BoxContainer>
     </CheckboxContainer>
   );

@@ -14,7 +14,7 @@ const A = styled.a`
   text-decoration: none;
   color: rgb(108, 108, 128);
 
-  &:active {
+  &:hover {
     color: rgb(130, 87, 230);
     background-color: rgb(242, 242, 250);
     border-radius: 4px 10px;
@@ -35,7 +35,6 @@ const Li = styled.li`
 const LogoDiv = styled.div`
   margin-left: 10px;
   margin-right: 15px;
-  // margin-top: 25px;
 `;
 
 const Nav = styled.nav`
@@ -81,29 +80,49 @@ const Navigation = React.memo(() => {
         </a>
       </LogoDiv>
       <Nav>
-        <Ul>
+        <Ul id="menubar" role="menubar" aria-label="Navigation Menu">
           <Li>
             {" "}
             <NavHeader>INTRODUCTION</NavHeader>
           </Li>
           <Li>
-            <A aria-current="page" href="/#overview" role="tab" id="tab1">
+            <A
+              aria-current="page"
+              href="/#overview"
+              role="menuitem"
+              id="menuitem1"
+            >
               Overview
             </A>
-            <A aria-current="page" href="/#gettingStarted" role="tab" id="tab2">
+            <A
+              aria-current="page"
+              href="/#gettingStarted"
+              role="menuitem"
+              id="menuitem2"
+            >
               Getting Started
             </A>
           </Li>
           <NavHeader>COMPONENTS</NavHeader>
 
           <Li>
-            <A aria-current="page" href="/#button" role="tab" id="tab3">
+            <A
+              aria-current="page"
+              href="/#button"
+              role="menuitem"
+              id="menuitem3"
+            >
               Button
             </A>
           </Li>
 
           <Li>
-            <A aria-current="page" href="/#checkbox" role="tab" id="tab4">
+            <A
+              aria-current="page"
+              href="/#checkbox"
+              role="menuitem"
+              id="menuitem4"
+            >
               Checkbox
             </A>
           </Li>

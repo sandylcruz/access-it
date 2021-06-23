@@ -22,7 +22,6 @@ const StyledButton = styled.button<ButtonProps>`
       : buttonSize === "medium"
       ? "100px"
       : "120px"};
-  // height: 50px;
   height: ${({ buttonSize }) =>
     buttonSize === "small"
       ? "35px"

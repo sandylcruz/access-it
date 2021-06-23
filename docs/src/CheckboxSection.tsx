@@ -1,24 +1,14 @@
 import React, { useCallback } from "react";
 
-import { Checkbox, Label } from "access-it";
+import { Checkbox, Fieldset, Label } from "access-it";
 import styled from "styled-components";
 
-import {
-  BottomOfBox,
-  Code,
-  H2,
-  HeaderTR,
-  SmallCode,
-  Table,
-  TH,
-  TD,
-  TopOfBox,
-} from "./sharedComponents";
+import { Code, H2 } from "./sharedComponents";
 
 const BoxContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  // justify-content: space-evenly;
   border-radius: 5px;
   height: 100%;
   min-width: 550px;
@@ -39,21 +29,14 @@ const CheckboxSection = React.memo(() => {
 
       <Code>Import {"{ Checkbox }"} from "access-it" </Code>
       <BoxContainer>
-        <Label id="c1">Testing 1</Label>
-        <Checkbox
-          onClick={onClick}
-          kind={"default"}
-          ariaChecked={true}
-          id="c1"
-        />
-
-        <Label id="c2">Testing 2</Label>
-        <Checkbox
-          onClick={onClick}
-          kind={"default"}
-          ariaChecked={false}
-          id="c2"
-        />
+        <Fieldset>
+          <Label htmlFor="c1">
+            <Checkbox onClick={onClick} ariaChecked={true} id="c1" />
+            Testing 1
+          </Label>
+        </Fieldset>
+        {/* <Label id="c2">Testing 2</Label>
+        <Checkbox onClick={onClick} ariaChecked={false} id="c2" /> */}
       </BoxContainer>
     </CheckboxContainer>
   );

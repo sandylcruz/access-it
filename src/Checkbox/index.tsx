@@ -8,7 +8,7 @@ const CheckboxAndLabel = styled.div`
   margin: 10px;
 `;
 
-const StyledCheckbox = styled.input`
+const CheckboxInputField = styled.input`
   background-color: pink;
   cursor: pointer;
   transition: 0.3s;
@@ -31,19 +31,17 @@ const StyledCheckbox = styled.input`
 `;
 
 interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  kind: "default" | "hidden" | "secondary";
   ariaChecked: true | false;
   styles?: any;
 }
 
 const Checkbox = React.memo<CheckboxProps>(
-  ({ ariaChecked, children, id, kind, onClick, styles }) => {
+  ({ ariaChecked, children, id, onClick, styles }) => {
     return (
       <CheckboxAndLabel>
-        <StyledCheckbox
+        <CheckboxInputField
           // ariaChecked={ariaChecked}
           id={id}
-          kind={kind}
           onClick={onClick}
           role="checkbox"
           type="checkbox"

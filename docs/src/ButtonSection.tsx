@@ -2,29 +2,20 @@ import React, { useCallback } from "react";
 
 import styled from "styled-components";
 import { Button } from "access-it";
+import {
+  BottomOfBox,
+  Code,
+  H3,
+  HeaderTR,
+  SmallCode,
+  Table,
+  TH,
+  TD,
+  TopOfBox,
+} from "./sharedComponents";
 import CodeIcon from "./CodeIcon.svg";
 
-const BottomOfBox = styled.div`
-  background-color: rgb(242, 242, 250);
-  width: 100%;
-  display: block;
-  text-align: right;
-  border-top: 1px solid rgb(214, 214, 221);
-`;
-
 const ButtonContainer = styled.div``;
-
-const Code = styled.div`
-  background-color: rgb(242, 242, 250);
-  color: black;
-  font-size: 15px;
-  font-family: Consolas, Menlo, monospace;
-  margin-bottom: 30px;
-  padding: 15px;
-  border-radius: 5px;
-  min-width: 550px;
-  max-width: 600px;
-`;
 
 const ButtonBoxContainer = styled.div`
   display: flex;
@@ -40,20 +31,10 @@ const ButtonBoxContainer = styled.div`
   border: 1px solid rgb(214, 214, 221);
 `;
 
-const H2 = styled.h2`
-  position: relative;
-  font-weight: bold;
-  margin-bottom: 10px;
-`;
-
 const SecondRowDiv = styled.div`
   display: block;
   justify-content: space-evenly;
   align-items: center;
-`;
-
-const TopOfBox = styled.div`
-  // border-bottom: 1px solid rgb(214, 214, 221);
 `;
 
 const ButtonSection = React.memo(() => {
@@ -62,10 +43,42 @@ const ButtonSection = React.memo(() => {
 
   return (
     <ButtonContainer id="button">
-      <H2>Button</H2>
+      <H3>Button</H3>
       <Code>Import {"{ Button }"} from "access-it" </Code>
 
-      <H2>Button Types</H2>
+      <Table>
+        <thead>
+          <HeaderTR>
+            <TH>Argument</TH>
+            <TH>Required?</TH>
+            <TH>Description</TH>
+          </HeaderTR>
+        </thead>
+        <tbody>
+          <tr>
+            <TD>
+              <SmallCode>kind</SmallCode>
+            </TD>
+            <TD>Yes</TD>
+            <TD>
+              Choose the type of button you want. Options are "basic,"
+              "primary," or "secondary."
+            </TD>
+          </tr>
+          <tr>
+            <TD>
+              <SmallCode>size</SmallCode>
+            </TD>
+            <TD>Yes</TD>
+            <TD>
+              Choose the size of your button. Options are "small," "medium," or
+              "large."
+            </TD>
+          </tr>
+        </tbody>
+      </Table>
+
+      <H3>Button Types</H3>
       <ButtonBoxContainer>
         <TopOfBox>
           <Button
@@ -111,7 +124,7 @@ const ButtonSection = React.memo(() => {
         </BottomOfBox>
       </ButtonBoxContainer>
 
-      <H2>Button Sizes</H2>
+      <H3>Button Sizes</H3>
       <SecondRowDiv>
         <ButtonBoxContainer>
           <TopOfBox>

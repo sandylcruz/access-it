@@ -3,6 +3,18 @@ import React, { useCallback } from "react";
 import { Checkbox, Label } from "access-it";
 import styled from "styled-components";
 
+import {
+  BottomOfBox,
+  Code,
+  H2,
+  HeaderTR,
+  SmallCode,
+  Table,
+  TH,
+  TD,
+  TopOfBox,
+} from "./sharedComponents";
+
 const BoxContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -18,24 +30,6 @@ const BoxContainer = styled.div`
 `;
 
 const CheckboxContainer = styled.div``;
-
-const Code = styled.div`
-  background-color: rgb(242, 242, 250);
-  color: black;
-  font-size: 15px;
-  font-family: Consolas, Menlo, monospace;
-  margin-bottom: 30px;
-  padding: 15px;
-  border-radius: 5px;
-  min-width: 550px;
-  max-width: 600px;
-`;
-
-const H2 = styled.h2`
-  position: relative;
-  font-weight: bold;
-  margin-bottom: 10px;
-`;
 
 const CheckboxSection = React.memo(() => {
   const onClick = useCallback((event) => console.log(event), []);

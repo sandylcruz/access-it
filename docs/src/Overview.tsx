@@ -26,14 +26,6 @@ const H2 = styled.h2`
   margin-bottom: 18px;
 `;
 
-const HeaderTR = styled.tr`
-  background-color: #f9f9f9;
-  color: black;
-  text-align: left;
-  border-radius: 4px;
-  max-width: 200px;
-`;
-
 const LICode = styled.code`
   background-color: rgb(242, 242, 250);
   color: black;
@@ -61,31 +53,6 @@ const P = styled.p`
   font-weight: 400;
 `;
 
-const SmallCode = styled.div`
-  background-color: rgb(242, 242, 250);
-  color: black;
-  font-family: Consolas, Menlo, monospace;
-  padding: 8px;
-  border-radius: 5px;
-`;
-
-const Table = styled.table`
-  margin: 25px 0;
-  font-size: 0.9em;
-  border-collapse: separate;
-  border-spacing: 0px 4px;
-  margin-bottom: 16px;
-  border-radius: 4px;
-`;
-
-const TD = styled.td`
-  padding: 12px 15px;
-`;
-
-const TH = styled.th`
-  padding: 12px 15px;
-`;
-
 const Overview = React.memo(() => {
   return (
     <OverviewContainer id="overview">
@@ -104,37 +71,6 @@ const Overview = React.memo(() => {
 
       <Arguments>
         <H2>Arguments</H2>
-        <Table>
-          <thead>
-            <HeaderTR>
-              <TH>Argument</TH>
-              <TH>Required?</TH>
-              <TH>Description</TH>
-            </HeaderTR>
-          </thead>
-          <tbody>
-            <tr>
-              <TD>
-                <SmallCode>kind</SmallCode>
-              </TD>
-              <TD>Yes</TD>
-              <TD>
-                Choose the type of button you want. Options are "basic,"
-                "primary," or "secondary."
-              </TD>
-            </tr>
-            <tr>
-              <TD>
-                <SmallCode>size</SmallCode>
-              </TD>
-              <TD>Yes</TD>
-              <TD>
-                Choose the size of your button. Options are "small," "medium,"
-                or "large."
-              </TD>
-            </tr>
-          </tbody>
-        </Table>
 
         <H2>Development</H2>
         <P>

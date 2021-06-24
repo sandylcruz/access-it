@@ -28,6 +28,13 @@ const CheckboxInputField = styled.input`
     border: 1px solid red;
     box-shadow: 0px 0px 10px 2px green;
   }
+
+    &:disabled {
+    background-color: #ededed;
+    color: #c9cdd1;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
 `;
 
 interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {

@@ -2,6 +2,7 @@ import React, { useCallback, useState } from "react";
 
 import { Checkbox, Fieldset, Label } from "access-it";
 import styled from "styled-components";
+import CodeIcon from "./CodeIcon.svg";
 
 import {
   Code,
@@ -25,6 +26,7 @@ const BottomOfBox = styled.div`
   border-right: 1px solid rgb(214, 214, 221);
   margin-top: -15px;
   margin-bottom: 15px;
+  max-width: 600px;
   border-radius: 0 0 0 5px;
 `;
 
@@ -35,7 +37,6 @@ const CheckboxContainer = styled.div``;
 const CheckboxSection = React.memo(() => {
   const [isChecked, setIsChecked] = useState(false);
 
-  const onClick = useCallback((event) => console.log(""), []);
   const onChange = useCallback((event) => {
     setIsChecked((previousState) => !previousState);
   }, []);
@@ -71,25 +72,22 @@ const CheckboxSection = React.memo(() => {
         <TopOfBox>
           <Fieldset>
             <Label>
-              <Checkbox
-                onClick={onClick}
-                onChange={onChange}
-                checked={isChecked}
-              />
+              <Checkbox onChange={onChange} checked={isChecked} />
               Default
             </Label>
           </Fieldset>
 
           <Fieldset>
             <Label>
-              <Checkbox onClick={onClick} onChange={onChange} checked={true} />
+              <Checkbox checked />
               Checked
             </Label>
           </Fieldset>
         </TopOfBox>
       </DemoContainer>
-      <BottomOfBox>asdfasdf</BottomOfBox>
-      asdfasdfafsd
+      <BottomOfBox>
+        <img src={CodeIcon} alt="Code icon" />
+      </BottomOfBox>
     </CheckboxContainer>
   );
 });

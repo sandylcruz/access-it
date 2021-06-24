@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 import {
   Code,
+  DemoContainer,
   H1,
   H2,
   HeaderTR,
@@ -14,18 +15,20 @@ import {
   TH,
 } from "./sharedComponents";
 
-const BoxContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  border-radius: 5px;
-  height: 100%;
-  min-width: 550px;
-  max-width: 600px;
-  align-items: center;
-  margin-top: 15px;
+const BottomOfBox = styled.div`
+  background-color: rgb(242, 242, 250);
+  width: 100%;
+  display: block;
+  text-align: right;
+  border-bottom: 1px solid rgb(214, 214, 221);
+  border-left: 1px solid rgb(214, 214, 221);
+  border-right: 1px solid rgb(214, 214, 221);
+  margin-top: -15px;
   margin-bottom: 15px;
-  border: 1px solid rgb(214, 214, 221);
+  border-radius: 0 0 0 5px;
 `;
+
+const TopOfBox = styled.div``;
 
 const CheckboxContainer = styled.div``;
 
@@ -40,9 +43,7 @@ const CheckboxSection = React.memo(() => {
   return (
     <CheckboxContainer id="checkbox">
       <H1 role="heading">Checkbox</H1>
-
       <Code>Import {"{ Checkbox }"} from "access-it" </Code>
-
       <Table>
         <thead>
           <HeaderTR>
@@ -66,26 +67,29 @@ const CheckboxSection = React.memo(() => {
         </tbody>
       </Table>
       <H2>Checkbox options</H2>
+      <DemoContainer>
+        <TopOfBox>
+          <Fieldset>
+            <Label>
+              <Checkbox
+                onClick={onClick}
+                onChange={onChange}
+                checked={isChecked}
+              />
+              Default
+            </Label>
+          </Fieldset>
 
-      <BoxContainer>
-        <Fieldset>
-          <Label>
-            <Checkbox
-              onClick={onClick}
-              onChange={onChange}
-              checked={isChecked}
-            />
-            Default
-          </Label>
-        </Fieldset>
-
-        <Fieldset>
-          <Label>
-            <Checkbox onClick={onClick} onChange={onChange} checked={true} />
-            Checked
-          </Label>
-        </Fieldset>
-      </BoxContainer>
+          <Fieldset>
+            <Label>
+              <Checkbox onClick={onClick} onChange={onChange} checked={true} />
+              Checked
+            </Label>
+          </Fieldset>
+        </TopOfBox>
+      </DemoContainer>
+      <BottomOfBox>asdfasdf</BottomOfBox>
+      asdfasdfafsd
     </CheckboxContainer>
   );
 });

@@ -20,6 +20,19 @@ export const Code = styled.div`
   max-width: 600px;
 `;
 
+export const DemoContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px 5px 0 0;
+  height: 100%;
+  min-width: 550px;
+  max-width: 600px;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 1px solid rgb(214, 214, 221);
+`;
+
 export const H1 = styled.h1`
   position: relative;
   font-weight: bold;

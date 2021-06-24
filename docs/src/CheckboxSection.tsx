@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 
 import { Checkbox, Fieldset, Label } from "access-it";
 import styled from "styled-components";
@@ -8,7 +8,6 @@ import { Code, H2 } from "./sharedComponents";
 const BoxContainer = styled.div`
   display: flex;
   flex-direction: row;
-  // justify-content: space-evenly;
   border-radius: 5px;
   height: 100%;
   min-width: 550px;
@@ -22,7 +21,13 @@ const BoxContainer = styled.div`
 const CheckboxContainer = styled.div``;
 
 const CheckboxSection = React.memo(() => {
-  const onClick = useCallback((event) => console.log(event), []);
+  const [isChecked, setIsChecked] = useState(false);
+
+  const onClick = useCallback((event) => console.log(""), []);
+  const onChange = useCallback((event) => {
+    setIsChecked((previousState) => !previousState);
+  }, []);
+
   return (
     <CheckboxContainer id="checkbox">
       <H2 role="heading">Checkbox</H2>
@@ -30,13 +35,22 @@ const CheckboxSection = React.memo(() => {
       <Code>Import {"{ Checkbox }"} from "access-it" </Code>
       <BoxContainer>
         <Fieldset>
-          <Label htmlFor="c1">
-            <Checkbox onClick={onClick} ariaChecked={true} id="c1" />
-            Testing 1
+          <Label>
+            <Checkbox
+              onClick={onClick}
+              onChange={onChange}
+              checked={isChecked}
+            />
+            Default
           </Label>
         </Fieldset>
-        {/* <Label id="c2">Testing 2</Label>
-        <Checkbox onClick={onClick} ariaChecked={false} id="c2" /> */}
+
+        <Fieldset>
+          <Label>
+            <Checkbox onClick={onClick} />
+            Checked
+          </Label>
+        </Fieldset>
       </BoxContainer>
     </CheckboxContainer>
   );

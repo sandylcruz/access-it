@@ -27,11 +27,6 @@ const LeftSide = styled.div`
   height: 100vh;
   background-color: white;
   z-index: 1001;
-  // display: none;
-  // @media screen and (min-width: 50px) {
-  //   display: flex;
-  //   width: 100%;
-  // }
 `;
 
 const RightSide = styled.div`

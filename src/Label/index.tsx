@@ -10,9 +10,7 @@ const StyledLabel = styled.label`
   cursor: pointer;
 `;
 
-interface LabelProps extends React.HTMLProps<HTMLButtonElement> {
-  // children: string;
-}
+interface LabelProps extends React.HTMLProps<HTMLButtonElement> {}
 
 const Label = React.memo<LabelProps>(({ children }) => {
   return <StyledLabel>{children}</StyledLabel>;

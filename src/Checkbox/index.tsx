@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import styled from "styled-components";
 
 import Label from "../Label/index";
@@ -31,21 +31,30 @@ const CheckboxInputField = styled.input`
 `;
 
 interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  ariaChecked: true | false;
   styles?: any;
+  checked?: boolean;
 }
 
 const Checkbox = React.memo<CheckboxProps>(
-  ({ ariaChecked, children, id, onClick, styles }) => {
+  ({ checked, onClick, onChange, styles }) => {
+    const handleChange = useCallback(
+      (event) => {
+        if (onChange) {
+          onChange(event);
+        }
+      },
+      [onChange]
+    );
+
     return (
       <CheckboxAndLabel>
         <CheckboxInputField
-          // ariaChecked={ariaChecked}
-          id={id}
           onClick={onClick}
           role="checkbox"
           type="checkbox"
           styles={styles}
+          checked={checked}
+          onChange={handleChange}
         />
       </CheckboxAndLabel>
     );

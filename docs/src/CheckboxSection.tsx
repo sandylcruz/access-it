@@ -47,7 +47,11 @@ const CheckboxSection = React.memo(() => {
 
         <Fieldset>
           <Label>
-            <Checkbox onClick={onClick} />
+            <Checkbox
+              onClick={onClick}
+              onChange={onChange}
+              checked={isChecked}
+            />
             Checked
           </Label>
         </Fieldset>

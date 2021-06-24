@@ -67,13 +67,20 @@ const ButtonSection = React.memo(() => {
           </tr>
           <tr>
             <TD>
-              <SmallCode>size</SmallCode>
+              <SmallCode>buttonSize</SmallCode>
             </TD>
             <TD>Yes</TD>
             <TD>
               Choose the size of your button. Options are "small," "medium," or
               "large."
             </TD>
+          </tr>
+          <tr>
+            <TD>
+              <SmallCode>disabled</SmallCode>
+            </TD>
+            <TD>No</TD>
+            <TD>Choose if button is disabled or not.</TD>
           </tr>
         </tbody>
       </Table>

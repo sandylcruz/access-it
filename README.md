@@ -14,10 +14,10 @@ yarn add access-it react styled-components
 
 ## Arguments
 
-| Argument | Required? | Description                                                                         |
-| -------- | --------- | ----------------------------------------------------------------------------------- |
-| `kind `  | Yes       | Choose the type of button you want. Options are "basic," "primary," or "secondary." |
-| `size`   | Yes       | Choose the size of your button. Options are "small," "medium," or "large."          |
+| Argument     | Required? | Description                                                                         |
+| ------------ | --------- | ----------------------------------------------------------------------------------- |
+| `kind `      | Yes       | Choose the type of button you want. Options are "basic," "primary," or "secondary." |
+| `buttonSize` | Yes       | Choose the size of your button. Options are "small," "medium," or "large."          |
 
 ## Development
 

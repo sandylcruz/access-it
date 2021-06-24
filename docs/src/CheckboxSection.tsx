@@ -3,7 +3,15 @@ import React, { useCallback, useState } from "react";
 import { Checkbox, Fieldset, Label } from "access-it";
 import styled from "styled-components";
 
-import { Code, H2 } from "./sharedComponents";
+import {
+  Code,
+  H2,
+  HeaderTR,
+  SmallCode,
+  Table,
+  TD,
+  TH,
+} from "./sharedComponents";
 
 const BoxContainer = styled.div`
   display: flex;
@@ -33,6 +41,26 @@ const CheckboxSection = React.memo(() => {
       <H2 role="heading">Checkbox</H2>
 
       <Code>Import {"{ Checkbox }"} from "access-it" </Code>
+
+      <Table>
+        <thead>
+          <HeaderTR>
+            <TH>Argument</TH>
+            <TH>Required?</TH>
+            <TH>Description</TH>
+          </HeaderTR>
+        </thead>
+        <tbody>
+          <tr>
+            <TD>
+              <SmallCode>checked</SmallCode>
+            </TD>
+            <TD>No</TD>
+            <TD>Choose if checkbox is pre-checked.</TD>
+          </tr>
+        </tbody>
+      </Table>
+
       <BoxContainer>
         <Fieldset>
           <Label>

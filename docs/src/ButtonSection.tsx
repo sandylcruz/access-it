@@ -50,6 +50,7 @@ const ButtonSection = React.memo(() => {
         <thead>
           <HeaderTR>
             <TH>Argument</TH>
+            <TH>Type</TH>
             <TH>Required?</TH>
             <TH>Description</TH>
           </HeaderTR>
@@ -58,6 +59,9 @@ const ButtonSection = React.memo(() => {
           <tr>
             <TD>
               <SmallCode>kind</SmallCode>
+            </TD>
+            <TD>
+              <SmallCode>string</SmallCode>
             </TD>
             <TD>Yes</TD>
             <TD>
@@ -69,6 +73,9 @@ const ButtonSection = React.memo(() => {
             <TD>
               <SmallCode>buttonSize</SmallCode>
             </TD>
+            <TD>
+              <SmallCode>string</SmallCode>
+            </TD>
             <TD>Yes</TD>
             <TD>
               Choose the size of your button. Options are "small," "medium," or
@@ -78,6 +85,9 @@ const ButtonSection = React.memo(() => {
           <tr>
             <TD>
               <SmallCode>disabled</SmallCode>
+            </TD>
+            <TD>
+              <SmallCode>boolean</SmallCode>
             </TD>
             <TD>No</TD>
             <TD>Choose if button is disabled or not.</TD>

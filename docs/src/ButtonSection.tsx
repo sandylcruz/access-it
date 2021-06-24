@@ -5,6 +5,7 @@ import { Button } from "access-it";
 import {
   BottomOfBox,
   Code,
+  H1,
   H3,
   HeaderTR,
   SmallCode,
@@ -43,7 +44,7 @@ const ButtonSection = React.memo(() => {
 
   return (
     <ButtonContainer id="button">
-      <H3>Button</H3>
+      <H1>Button</H1>
       <Code>Import {"{ Button }"} from "access-it" </Code>
 
       <Table>

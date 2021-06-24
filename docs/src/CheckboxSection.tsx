@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 import {
   Code,
+  H1,
   H2,
   HeaderTR,
   SmallCode,
@@ -38,7 +39,7 @@ const CheckboxSection = React.memo(() => {
 
   return (
     <CheckboxContainer id="checkbox">
-      <H2 role="heading">Checkbox</H2>
+      <H1 role="heading">Checkbox</H1>
 
       <Code>Import {"{ Checkbox }"} from "access-it" </Code>
 
@@ -46,6 +47,7 @@ const CheckboxSection = React.memo(() => {
         <thead>
           <HeaderTR>
             <TH>Argument</TH>
+            <TH>Type</TH>
             <TH>Required?</TH>
             <TH>Description</TH>
           </HeaderTR>
@@ -55,11 +57,15 @@ const CheckboxSection = React.memo(() => {
             <TD>
               <SmallCode>checked</SmallCode>
             </TD>
+            <TD>
+              <SmallCode>boolean</SmallCode>
+            </TD>
             <TD>No</TD>
             <TD>Choose if checkbox is pre-checked.</TD>
           </tr>
         </tbody>
       </Table>
+      <H2>Checkbox options</H2>
 
       <BoxContainer>
         <Fieldset>
@@ -75,11 +81,7 @@ const CheckboxSection = React.memo(() => {
 
         <Fieldset>
           <Label>
-            <Checkbox
-              onClick={onClick}
-              onChange={onChange}
-              checked={isChecked}
-            />
+            <Checkbox onClick={onClick} onChange={onChange} checked={true} />
             Checked
           </Label>
         </Fieldset>

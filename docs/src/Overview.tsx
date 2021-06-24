@@ -2,29 +2,9 @@ import React from "react";
 
 import styled from "styled-components";
 
+import { Code, H1, H2 } from "./sharedComponents";
+
 const Arguments = styled.div``;
-
-const Code = styled.div`
-  background-color: rgb(242, 242, 250);
-  color: black;
-  font-family: Consolas, Menlo, monospace;
-  margin-bottom: 10px;
-  padding: 25px;
-  border-radius: 5px;
-  max-width: 580px;
-`;
-
-const H1 = styled.h1`
-  position: relative;
-  font-weight: bold;
-  margin-bottom: 24px;
-`;
-
-const H2 = styled.h2`
-  position: relative;
-  font-weight: bold;
-  margin-bottom: 18px;
-`;
 
 const LICode = styled.code`
   background-color: rgb(242, 242, 250);

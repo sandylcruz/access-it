@@ -20,6 +20,12 @@ export const Code = styled.div`
   max-width: 600px;
 `;
 
+export const H1 = styled.h1`
+  position: relative;
+  font-weight: bold;
+  margin-bottom: 24px;
+`;
+
 export const H2 = styled.h2`
   position: relative;
   font-weight: bold;

@@ -1,6 +1,10 @@
 # Access-It
 
-Access-It is a collection of accessible components that follow WAI-ARIA accessibility guidelines. [Documentation here](https://sandylcruz.github.io/access-it/)
+<p align="center">
+  <img width="460" height="300" src="./logo.svg">
+</p>
+
+Access-It is a collection of accessible components that follow WAI-ARIA accessibility guidelines. [Documentation here.](https://sandylcruz.github.io/access-it/)
 
 ## Install
 
@@ -12,6 +16,10 @@ npm install access-it react styled-components --save
 yarn add access-it react styled-components
 ```
 
+<p align="center">
+  <img width="460" height="300" src="buttonDemo.gif">
+</p>
+
 ## Button Arguments
 
 | Argument     |     | Required?                                                                           | Description |
@@ -19,8 +27,7 @@ yarn add access-it react styled-components
 | `kind `      | Yes | Choose the type of button you want. Options are "basic," "primary," or "secondary." |
 | `buttonSize` | Yes | Choose the size of your button. Options are "small," "medium," or "large."          |
 | `disabled`   | No  | Choose if button is disabled or not                                                 |
-
-| `style` | No | Add your chosen styling |
+| `style`      | No  | Add your chosen styling                                                             |
 
 ## Checkbox Arguments
 

@@ -16,18 +16,14 @@ npm install access-it react styled-components --save
 yarn add access-it react styled-components
 ```
 
-<p align="center">
-  <img width="460" height="300" src="buttonDemo.gif">
-</p>
-
 ## Button Arguments
 
-| Argument     |     | Required?                                                                           | Description |
-| ------------ | --- | ----------------------------------------------------------------------------------- | ----------- |
-| `kind `      | Yes | Choose the type of button you want. Options are "basic," "primary," or "secondary." |
-| `buttonSize` | Yes | Choose the size of your button. Options are "small," "medium," or "large."          |
-| `disabled`   | No  | Choose if button is disabled or not                                                 |
-| `style`      | No  | Add your chosen styling                                                             |
+| Argument     | Required? | Description                                                                         |
+| ------------ | --------- | ----------------------------------------------------------------------------------- |
+| `kind `      | Yes       | Choose the type of button you want. Options are "basic," "primary," or "secondary." |
+| `buttonSize` | Yes       | Choose the size of your button. Options are "small," "medium," or "large."          |
+| `disabled`   | No        | Choose if button is disabled or not                                                 |
+| `style`      | No        | Add your chosen styling                                                             |
 
 ## Checkbox Arguments
 

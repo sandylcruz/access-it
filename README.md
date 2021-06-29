@@ -12,12 +12,22 @@ npm install access-it react styled-components --save
 yarn add access-it react styled-components
 ```
 
-## Arguments
+## Button Arguments
 
-| Argument     | Required? | Description                                                                         |
-| ------------ | --------- | ----------------------------------------------------------------------------------- |
-| `kind `      | Yes       | Choose the type of button you want. Options are "basic," "primary," or "secondary." |
-| `buttonSize` | Yes       | Choose the size of your button. Options are "small," "medium," or "large."          |
+| Argument     |     | Required?                                                                           | Description |
+| ------------ | --- | ----------------------------------------------------------------------------------- | ----------- |
+| `kind `      | Yes | Choose the type of button you want. Options are "basic," "primary," or "secondary." |
+| `buttonSize` | Yes | Choose the size of your button. Options are "small," "medium," or "large."          |
+| `disabled`   | No  | Choose if button is disabled or not                                                 |
+
+| `style` | No | Add your chosen styling |
+
+## Checkbox Arguments
+
+| Argument   | Required? | Description                                    |
+| ---------- | --------- | ---------------------------------------------- |
+| `checked ` | No        | Choose if button is pre-checked and controlled |
+| `style`    | No        | Add your chosen styling                        |
 
 ## Development
 

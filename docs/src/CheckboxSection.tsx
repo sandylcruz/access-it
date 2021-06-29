@@ -80,13 +80,19 @@ const CheckboxSection = React.memo(() => {
           <Fieldset>
             <Label>
               <Checkbox checked />
-              Checked
+              Controlled
             </Label>
           </Fieldset>
         </TopOfBox>
       </DemoContainer>
       <BottomOfBox>
-        <img src={CodeIcon} alt="Code icon" />
+        <a
+          href="https://github.com/sandylcruz/access-it/blob/master/docs/src/CheckboxSection.tsx"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={CodeIcon} alt="Code icon" />
+        </a>
       </BottomOfBox>
     </CheckboxContainer>
   );

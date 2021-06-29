@@ -16,6 +16,10 @@ npm install access-it react styled-components --save
 yarn add access-it react styled-components
 ```
 
+## Button Demo
+
+![buttonDemo](button_demo9.gif)
+
 ## Button Arguments
 
 | Argument     | Required? | Description                                                                         |
@@ -24,6 +28,10 @@ yarn add access-it react styled-components
 | `buttonSize` | Yes       | Choose the size of your button. Options are "small," "medium," or "large."          |
 | `disabled`   | No        | Choose if button is disabled or not                                                 |
 | `style`      | No        | Add your chosen styling                                                             |
+
+## Checkbox
+
+![checkboxdemo](checkbox_demo2.gif)
 
 ## Checkbox Arguments
 

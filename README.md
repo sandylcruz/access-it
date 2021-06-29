@@ -42,6 +42,6 @@ In order to start working:
 
 To publish:
 
-1. After the repo is in the correct state, bump the package version following [semantic versioning](https://semver.org/).
+1. After the repo is in the correct state, bump the package version following [semantic versioning](https://semver.org/)
 2. Commit the package bump in a commit with a comment like "Bump to 1.0.1".
 3. Run `npm publish --access public`.

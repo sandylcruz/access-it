@@ -17,7 +17,7 @@ yarn add access-it react styled-components
 ```
 
 <p align="center">
-  <img width="460" height="300" src="buttonDemo.gif">
+<img src="https://user-images.githubusercontent.com/60662264/123731910-f33ee980-d84d-11eb-88b7-69151b5d552b.gif" />
 </p>
 
 ## Button Arguments

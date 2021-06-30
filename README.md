@@ -38,7 +38,6 @@ yarn add access-it react styled-components
 | Argument   | Required? | Description                                    |
 | ---------- | --------- | ---------------------------------------------- |
 | `checked ` | No        | Choose if button is pre-checked and controlled |
-| `style`    | No        | Add your chosen styling                        |
 
 ## Development
 

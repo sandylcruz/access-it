@@ -53,6 +53,8 @@
     "typecheck": "tsc",
     "types:build": "tsc --declaration --emitDeclarationOnly --declarationDir types",
     "types:build:watch": "yarn types:build --watch",
-    "eslint": "eslint --fix ./src --ext .tsx"
+    "eslint": "yarn eslint:base --fix",
+    "eslint:base": "eslint ./src --ext .tsx",
+    "eslint:ci": "yarn eslint:base"
   }
 }

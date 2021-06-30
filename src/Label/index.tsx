@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledLabel = styled.label`
   font-weight: bold;
@@ -12,8 +12,6 @@ const StyledLabel = styled.label`
 
 interface LabelProps extends React.HTMLProps<HTMLButtonElement> {}
 
-const Label = React.memo<LabelProps>(({ children }) => {
-  return <StyledLabel>{children}</StyledLabel>;
-});
+const Label = React.memo<LabelProps>(({ children }) => <StyledLabel>{children}</StyledLabel>);
 
 export default Label;

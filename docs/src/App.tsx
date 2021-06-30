@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import styled, { createGlobalStyle } from "styled-components";
-import Components from "./Components";
+import styled, { createGlobalStyle } from 'styled-components';
 
-import Navigation from "./Nav";
-import Overview from "./Overview";
+import Components from './Components';
+import Navigation from './Nav';
+import Overview from './Overview';
 
 const AppContainer = styled.div`
   display: flex;

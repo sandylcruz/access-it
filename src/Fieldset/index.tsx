@@ -1,5 +1,5 @@
-import * as React from "react";
-import styled from "styled-components";
+import * as React from 'react';
+import styled from 'styled-components';
 
 const StyledFieldset = styled.fieldset`
   display: flex;
@@ -7,8 +7,8 @@ const StyledFieldset = styled.fieldset`
   border: none;
 `;
 
-const Fieldset = React.memo(({ children }) => {
-  return <StyledFieldset>{children}</StyledFieldset>;
-});
+const Fieldset = React.memo(({ children }) => (
+  <StyledFieldset>{children}</StyledFieldset>
+));
 
 export default Fieldset;

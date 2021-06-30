@@ -1,8 +1,6 @@
-import * as React from "react";
-import { useCallback, useState } from "react";
-import styled from "styled-components";
-
-import Label from "../Label/index";
+import * as React from 'react';
+import { useCallback } from 'react';
+import styled from 'styled-components';
 
 const CheckboxAndLabel = styled.div`
   margin: 10px;
@@ -38,34 +36,30 @@ const CheckboxInputField = styled.input`
 `;
 
 interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  styles?: any;
   checked?: boolean;
 }
 
-const Checkbox = React.memo<CheckboxProps>(
-  ({ checked, onClick, onChange, styles }) => {
-    const handleChange = useCallback(
-      (event) => {
-        if (onChange) {
-          onChange(event);
-        }
-      },
-      [onChange]
-    );
+const Checkbox = React.memo<CheckboxProps>(({ checked, onClick, onChange }) => {
+  const handleChange = useCallback(
+    (event) => {
+      if (onChange) {
+        onChange(event);
+      }
+    },
+    [onChange],
+  );
 
-    return (
-      <CheckboxAndLabel>
-        <CheckboxInputField
-          onClick={onClick}
-          role="checkbox"
-          type="checkbox"
-          styles={styles}
-          checked={checked}
-          onChange={handleChange}
-        />
-      </CheckboxAndLabel>
-    );
-  }
-);
+  return (
+    <CheckboxAndLabel>
+      <CheckboxInputField
+        onClick={onClick}
+        role="checkbox"
+        type="checkbox"
+        checked={checked}
+        onChange={handleChange}
+      />
+    </CheckboxAndLabel>
+  );
+});
 
 export default Checkbox;

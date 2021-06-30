@@ -1,3 +1,4 @@
 types
 dist
 node_modules
+src/**/*.js

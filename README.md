@@ -4,7 +4,7 @@
   <img width="460" height="300" src="./logo.svg">
 </p>
 
-Access-It is a collection of accessible components that follow WAI-ARIA accessibility guidelines. [Documentation here.](https://sandylcruz.github.io/access-it/)
+Access-It is an NPM package composed of accessible components that follow WAI-ARIA accessibility guidelines. [Documentation here.](https://sandylcruz.github.io/access-it/)
 
 ## Install
 
